@@ -58,6 +58,11 @@ sudo -i
 export REQUESTS_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.crt
 /opt/rh/rh-python36/root/usr/bin/pip3.6 install pipenv --proxy http://158.230.101.98:8080
 pipenv install --python /opt/rh/rh-python36/root/usr/bin/python3.6 twine --dev
+git init
+git config --global user.name "Your Name"
+git config --global user.email "Your Email Address"
+git add --all
+git commit -m "Initial Code Directory Commit"
 ```
 
 ```
