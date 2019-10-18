@@ -63,6 +63,9 @@ git config --global user.name "Your Name"
 git config --global user.email "Your Email Address"
 git add --all
 git commit -m "Initial Code Directory Commit"
+git config credential.helper store
+git remote add https://github.com/etc
+
 ```
 
 ```
