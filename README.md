@@ -65,7 +65,10 @@ git add --all
 git commit -m "Initial Code Directory Commit"
 git config credential.helper store
 git remote add https://github.com/etc
-
+# Workspace contains Pipfile but 'pipenv' was not found. Make sure 'pipenv' is on the PATH.
+sudo ln -s /opt/rh/rh-python36/root/usr/bin/pipenv /usr/local/bin/pipenv
+# pipenv install black --dev --pre # Installed Automatically
+pipenv install pylint --dev
 ```
 
 ```
