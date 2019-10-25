@@ -76,16 +76,18 @@ async def distribute_work(url, requests, concurrency, results):
     for task in tasks:
         task.cancel()
 
-    print("---")
-    print(
-        f"{concurrency} workers took {total_time:.2f} seconds to complete {len(results)} requests"
-    )
+    return total_time
+    # print("---")
+    # print(
+    #     f"{concurrency} workers took {total_time:.2f} seconds to complete {len(results)} requests"
+    # )
 
 
 def assault(url, requests, concurrency):
     """ Entrypoint to making requests """
     results = []
-    asyncio.run(
+    total_time = asyncio.run(
         distribute_work(url, requests, concurrency, results)
     )  # distribute_work doesn't return result, but returns a coroutine, that asyncio.run() will cause to execute
-    print(results)
+    return (total_time, results)
+    # print(results)
